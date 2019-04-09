@@ -14,7 +14,7 @@ oses:
 <% end -%>
 
 <% subnet = @host.subnet -%>
-<% if subnet.nil? || (subnet.respond_to?(:dhcp_boot_mode?) && subnet.dhcp_boot_mode?) -%>
+<% if subnet.nil? || subnet.dhcp_boot_mode? -%>
   <%- provision_url_suffix = '' -%>
   <%- netcfg_args = '' -%>
 <% else -%>

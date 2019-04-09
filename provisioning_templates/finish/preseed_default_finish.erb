@@ -20,7 +20,7 @@ oses:
 <% elsif subnet.nil? -%>
   <%- dhcp = true -%>
 <% else -%>
-  <%- dhcp = subnet.respond_to?(:dhcp_boot_mode?) && subnet.dhcp_boot_mode? -%>
+  <%- dhcp = subnet.dhcp_boot_mode? -%>
 <% end -%>
 <% unless dhcp -%>
 # host and domain name need setting as these values may have come from dhcp if pxe booting
