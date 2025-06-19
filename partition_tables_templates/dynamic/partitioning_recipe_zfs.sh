@@ -239,7 +239,7 @@ array_disk_size=$(awk '{counts[$3]++} END {for (value in counts) print value, co
         # 4) keep the size value only.
 disks_zfs_array=$(grep $array_disk_size "$disks_listof")
 
-build_zfs_cmd="/target/root/build_zfs_cmd"
+build_zfs_cmd="/build_zfs_cmd"
 
 # Write ZFS build command or warning message to the target
 mkdir -p $(dirname "$build_zfs_cmd")          # Prepare parent directories
